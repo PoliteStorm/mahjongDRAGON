@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🀄 Mahjong Token Info</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="mahjong-red-dragon-svgrepo-com.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="mahjong-red-dragon-svgrepo-com.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="mahjong-red-dragon-svgrepo-com.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="mahjong-red-dragon-svgrepo-com-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="mahjong-red-dragon-svgrepo-com-16x16.png">
+</head>
+<body class="info-page">
+    <div class="content">
+        <p id="copyText">43YbmFQxKussxNkB11iWEcBPsqfPBYcPFxFQ4zbGpump</p>
+        <button onclick="copyToClipboard()">Copy</button>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        function copyToClipboard() {
+            var text = document.getElementById("copyText");
+            var textArea = document.createElement("textarea");
+            textArea.value = text.textContent;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("Copy");
+            textArea.remove();
+            alert("Copied to clipboard!");
+        }
+    </script>
+</body>
+</html>
